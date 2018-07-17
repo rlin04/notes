@@ -1,3 +1,1 @@
-# notes
-# notes
-# notes
+# notes on using various programs and libraries
