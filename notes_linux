@@ -1,0 +1,115 @@
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+Linux Tutorial Notes
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+ls – list contents of a directory
+more – view contents of a file
+mkdir – make a directory
+mv – move or rename files or directories
+cd – change directory
+pwd – print working directory (current location)
+.. – special argument for cd, directory above working directory
+cp – copy files
+rm – remove files (delete permanently)
+rmdir – remove directories (delete permanently)
+-l – long listing flag, shows type, security, owner, group, size (bytes), last mod, name
+	rwx: read, write, execute
+chmod – change a file’s security mode (ugo: user, group, other)
+    `+` to add, `-` to remove
+    i.e. `chmod g+w dir`
+    7 = rwx, 5 = rx, (r4, w2, x1)
+* - wildcard used to specify more than one file at a time
+    `ls *` lists all files in current directory
+    `ls *y` lists all files that end with `y`
+? – wildcard used to match exactly one character
+    `ls tr?cky` lists all files that match except for ?
+groups – shows current group memberships
+~ - represents home directory `/home/rlin04`
+man keyword - opens the Linux manual entry if it exits
+man [-k] keyword - searches for keywords in the Linux manual
+finger user - displays the user's home directory
+find start_dir -name "query*" - find items whose names start with "query"
+    `*` is used for wildcards and requires quotation marks
+cat a b - concatenate a and b into ab. a and b can be strings or entire files
+cat a b > c - sends the contents of cat a b to c, overwriting the original c if it exists
+cat a b >> c - sends the contents of cat a b to c, adding on to the original c if it exists
+more - old utility used to split output into pages, but can only scroll down
+less - newer utility that can scrollup, but is massive in comparison to more
+lpr doc - sends doc to the Linux default printer
+lpr -P new_pr doc - sends doc to the new_pr
+lpr - displays the Linux default printer's jobs
+lpr -P new_pr - displays new_pr's print jobs
+lprm -P new_pr job_num - cancels job_num for new_pr
+cp -r dir ~ - copy directory dir to ~
+df - check free space left on disk
+df . - check free space left on current disk
+rm -r dir - deletes an entire directory (rmdir only removes empty directories)
+ps - shows process statuses
+ps aux - shows statuses of all processes
+cat a b | lpr - prints the concatenation of the files a and b
+    the pipe's output is used as the argument for the second command
+grep file query - displays every line in file containing query
+ps aux | grep query - displays processes containing query
+kill PID - tries to kill the process with specified PID
+kill -9 PID - immediately kills the process with specified PID
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+General Notes
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+Files and directories can be accessed using full or relative pathnames
+Options start with `-`
+Linux system is referred to as “world”, 
+Ctrl-Alt-T – open terminal
+
+To change Desktop Environments, log out, click the ubuntu logo, and choose DE
+
+Home/End - go to the beginning and end of line respectively
+Shift-Home/End - go the top and bottom of file respectively
+
+cd - - go to previous directory
+
+dpkg --list | grep key* - lists all programs staring with key
+sudo apt --purge remove prog - uninstalls prog and deletes configuration files
+
+rsync -av --delete /Dir1 /Dir2 - syncs contents of Dir1 and Dir2, deleting Dir2 files that aren't in Dir1
+
+.a = .lib, .so = .dll, env = set
+.bashrc is the system variables script that defines PATH
+`source` is the command to run shell scripts
+
+`lsb_release -a` shows information about your Ubuntu release
+
+`sudo service network-manager restart` reboot network manager to fix WiFi
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+Programs to Install
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+Xfce
+vim
+gcc
+g++
+Midori
+Lynx
+xscreensaver
+xscreensaver-gl-extra
+xscreensaver-data-extra
+
+set hotkeys
+  workspace switching and movement
+  menu, terminal, minimize, finder
+set black background
+set visible password asterisks
+set vim as default text editor
+set Midori as default browser
+disable Avahi detection
+
+Custom Keyboard Application Shortcuts:
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+Alt-A – menu
+Alt-S – terminal (https://linuxsurvival.com/linux-home-directories/)
+Alt-D – Chrome
+Alt-F – Finder
+
+

@@ -1,0 +1,8 @@
+git config --global user.name "rlin04"
+git config --global user.email "richard.lin2004@gmail.com"
+
+git config --list
+
+git init
+
+...so apparently github repositories can't be added using git. Guess I'll just have to use and the github API

@@ -1,0 +1,1 @@
+put `set (CMAKE_CXX_StANDARD 11)` at the top of CMakeLists.txt to activate C++11 features
