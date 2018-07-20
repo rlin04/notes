@@ -1,4 +1,4 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			       Lesson 1 SUMMARY
 
 
@@ -19,7 +19,7 @@
 NOTE: Pressing <ESC> will place you in Normal mode or will cancel
       an unwanted and partially completed command.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			       Lesson 2 SUMMARY
 
 
@@ -42,7 +42,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      To undo all the changes on a line, type:  U  (capital U)
      To undo the undo's, type:		       CTRL-R
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			       Lesson 3 SUMMARY
 
 
@@ -61,7 +61,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 	 c   [number]   motion
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			       Lesson 4 SUMMARY
 
 
@@ -84,7 +84,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      To substitute all occurrences in the file type	   :%s/old/new/g
      To ask for confirmation each time add 'c'		   :%s/old/new/gc
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			       Lesson 5 SUMMARY
 
 
@@ -106,7 +106,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
   5.  :r !dir  reads the output of the dir command and puts it below the
       cursor position.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			       Lesson 6 SUMMARY
 
   1. Type  o  to open a line BELOW the cursor and start Insert mode.
@@ -129,7 +129,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
   7. Prepend "no" to switch an option off:   :set noic
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			       Lesson 7 SUMMARY
 
 
@@ -146,21 +146,23 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
   6. When typing a  :  command, press CTRL-D to see possible completions.
      Press <TAB> to use one completion.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 			       Personal Notes
 
-- Type     mx  to mark the current line with "x" 
+- Type     mx  to mark the current line with 'x' 
 - Type     d'x to delete from the marked line to the current one
-- Type     d/word to delete from the cursor until then next "word" 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Type     d/word to delete from the cursor until then next "word" 
+- Type      
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 			       .vimrc Keymap
 
-imap <C-X> <Esc>
-nmap <S-J> <C-D>
-nmap <S-K> <C-U>
-nmap <S-H> 0
-nmap <S-L> $
-nmap <S-U> <C-R>
+imap ;;    <Esc>
+nmap <M-J> <C-D>
+nmap <M-K> <C-U>
+nmap <M-H> 0
+nmap <M-L> $
+nmap <M-U> <C-R>

@@ -2,11 +2,14 @@ git config --global user.name "_name_"
 git config --global user.email "_email_"
 git config --list
 
--
-
 echo "# notes" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/rlin04/notes.git
 git push -u origin master
+
+git pull --rebase origin master
+  = git fetch + git rebase against tracking upstream branch
+
+be sure to init in the directory you want to push

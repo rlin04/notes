@@ -54,6 +54,38 @@ kill PID - tries to kill the process with specified PID
 kill -9 PID - immediately kills the process with specified PID
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+Programs to Install
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+Xfce
+vim
+gcc
+g++
+Midori
+Lynx
+xscreensaver
+xscreensaver-gl-extra
+xscreensaver-data-extra
+
+set hotkeys
+  workspace switching and movement
+  menu, terminal, minimize, finder
+set black background
+set visible password asterisks
+set vim as default text editor
+set Midori as default browser
+disable Avahi detection
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+Custom Keyboard Application Shortcuts:
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+Alt-A – menu
+Alt-S – terminal (https://linuxsurvival.com/linux-home-directories/)
+Alt-D – Chrome
+Alt-F – Finder
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 General Notes
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 
@@ -82,34 +114,4 @@ rsync -av --delete /Dir1 /Dir2 - syncs contents of Dir1 and Dir2, deleting Dir2 
 
 `sudo service network-manager restart` reboot network manager to fix WiFi
 
-~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-Programs to Install
-~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-
-Xfce
-vim
-gcc
-g++
-Midori
-Lynx
-xscreensaver
-xscreensaver-gl-extra
-xscreensaver-data-extra
-
-set hotkeys
-  workspace switching and movement
-  menu, terminal, minimize, finder
-set black background
-set visible password asterisks
-set vim as default text editor
-set Midori as default browser
-disable Avahi detection
-
-Custom Keyboard Application Shortcuts:
-~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-Alt-A – menu
-Alt-S – terminal (https://linuxsurvival.com/linux-home-directories/)
-Alt-D – Chrome
-Alt-F – Finder
-
-
+`g++ -std=c++11 _.cpp `pkg-config --libs -cflags opencv` -o _`
