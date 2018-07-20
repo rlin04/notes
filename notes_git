@@ -13,3 +13,5 @@ git pull --rebase origin master
   = git fetch + git rebase against tracking upstream branch
 
 be sure to init in the directory you want to push
+
+git config credential.helper store
