@@ -147,17 +147,18 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      Press <TAB> to use one completion.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 			       Personal Notes
 
-- Type     mx  to mark the current line with 'x' 
-- Type     d'x to delete from the marked line to the current one
+`mx`  to mark the current line with 'x' 
+`d'x` to delete from the marked line to the current one
 
-- Type     d/word to delete from the cursor until then next "word" 
-- Type      
+`d/`word to delete from the cursor until then next "word" 
+
+`:bro o` `:bro sav` opens/saves files using the Windows explorer when using gvim
+
+`<C-W>+directional key` switches between Vim windows
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 			       .vimrc Keymap
 
 imap ;;    <Esc>
