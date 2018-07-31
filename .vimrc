@@ -5,8 +5,8 @@ execute "set <M-L>=\el"
 execute "set <M-U>=\eu"
 
 imap ;; <Esc>
-nmap <M-J> <C-D>
-nmap <M-K> <C-U>
+nmap <M-J> <PageDown>
+nmap <M-K> <PageUp>
 nmap <M-H> 0
 nmap <M-L> $
 nmap <M-U> <C-R>
