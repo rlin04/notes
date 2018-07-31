@@ -158,6 +158,10 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 `<C-W>+directional key` switches between Vim windows
 
+Enter the following in Windows Command Line to set vim as default
+  assoc .="No Extension"
+  ftype "No Extension"="C:\[tools]\Vim\vim81\gvim.exe" "%1"
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			       .vimrc Keymap
 
