@@ -1,5 +1,3 @@
-#Include C:\[tools]\PedersonAHK\
-
 ; ---------------------------------------
 ; shift
 ; volume_change
