@@ -1,4 +1,33 @@
 ; ---------------------------------------
+; prime
+; mouse clicks
+; ---------------------------------------
+
+`::
+   win := WinExist("A")
+   click, down
+   WinActivate %win%
+return
+
+` up::
+   win := WinExist("A")
+   click, up
+   WinActivate %win%
+return
+
++`::
+   win := WinExist("A")
+   click, down, right
+   WinActivate %win%
+return
+
++` up::
+   win := WinExist("A")
+   click, up, right
+   WinActivate %win%
+return
+
+; ---------------------------------------
 ; shift
 ; volume_change
 ; ---------------------------------------
@@ -8,7 +37,7 @@
 
 ; ---------------------------------------
 ; alt, alt+shift
-; deletion, navigation, quote_enclosure
+; deletion, navigation, quotes, clicks
 ; ---------------------------------------
 
 !x::send {Delete}
@@ -16,14 +45,15 @@
 !r::send {browser_refresh}
 !h::send <^h
 !Space::send _
-!WheelUp::send {PgUp}
-!WheelDown::send {PgDn}
+!WheelUp::send {pgup}
+!WheelDown::send {pgdn}
 !+WheelUp::send {Home}
 !+WheelDown::send {End}
 
+
 !'::EncQuote("'")
 !+'::EncQuote("""")
-
+ 
 EncQuote(q) {
   oldClipboard = %clipboard%
   Clipboard := 
@@ -34,12 +64,12 @@ EncQuote(q) {
     Sleep 100
     Send ^v
   }
-  Clipboard = %oldClipboard%
+  clipboard = %oldClipboard%
 }
 
 ; ---------------------------------------
 ; ctrl+shift
-; number_row
+; number_row, clicking
 ; ---------------------------------------
 
 <^+a::send 1
@@ -89,7 +119,8 @@ EncQuote(q) {
 <^!e::send ^{right}
 <^!y::send ^c
 <^!p::send ^v
-<^!x::send ^{Delete}
+<^!x::send ^{Backspace}
+<^!Backspace::send {Backspace}
 <^!d::send {end}+{home}+{home}+{left}{delete}
 <^!o::send {end}{enter}
 <^!u::send ^z
@@ -98,8 +129,8 @@ EncQuote(q) {
 <^!q::WinClose, A
 
 <^!left::send {shift down}{ralt down}{tab}{ralt up}{shift up}
-<^!down::send {ralt down}{tab}{ralt up}
-<^!up::send {ralt down}{tab}{ralt up}
+<^!down::send {pgdn}
+<^!up::send {pgup}
 <^!right::send {ralt down}{tab}{ralt up}
 
 <^!v::                            ; Text–only paste from ClipBoard
