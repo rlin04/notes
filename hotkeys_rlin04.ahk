@@ -7,6 +7,15 @@
 +WheelDown::send {volume_down}
 
 ; ---------------------------------------
+; alt, alt+shift; ---------------------------------------
+; shift
+; volume_change
+; ---------------------------------------
+
++WheelUp::send {volume_up}
++WheelDown::send {volume_down}
+
+; ---------------------------------------
 ; alt, alt+shift
 ; deletion, navigation, quote_enclosure
 ; ---------------------------------------
@@ -15,6 +24,7 @@
 !+x::send {Backspace}
 !r::send {browser_refresh}
 !h::send <^h
+!Space::send _
 !WheelUp::send {PgUp}
 !WheelDown::send {PgDn}
 !+WheelUp::send {Home}
@@ -26,12 +36,12 @@
 EncQuote(q) {
   oldClipboard = %clipboard%
   Clipboard := 
-  SendInput ^c
+  Send ^c
   Sleep 100
   if (Clipboard != "") {
     Clipboard = %q%%clipboard%%q%
     Sleep 100
-    SendInput ^v
+    Send ^v
   }
   Clipboard = %oldClipboard%
 }
@@ -54,7 +64,8 @@ EncQuote(q) {
 <^!p::send {+}
 <^!m::send `-
 <^!e::send `=
-<^!space::send _
+<^!Space::send `_
+<^!Backspace::send {Backspace}
 
 <^!right::send {ralt down}{tab}{ralt up}
 <^!left::send {shift down}{ralt down}{tab}{ralt up}{shift up}
@@ -76,6 +87,26 @@ EncQuote(q) {
 <^+l::send )
 <^+;::send _
 <^+'::send {+}
+
+; ---------------------------------------
+; ctrl+shift+alt
+; vim commands
+; ---------------------------------------
+
+<^+!h::send {Left}
+<^+!j::send {Down}
+<^+!k::send {Up}
+<^+!l::send {Right}
+<^+!b::send ^{Left}
+<^+!e::send ^{Right}
+<^+!y::send ^c
+<^+!p::send ^p
+<^+!x::send {Delete}
+<^+!d::send {End}+{Home}+{Home}+{Left}{Delete}
+<^+!u::send ^z
+<^+!r::send ^y
+<^+!w::send ^s
+<^+!q::WinClose, A
 
 <^+v::                            ; Text–only paste from ClipBoard
    Clip0 = %ClipBoardAll%
