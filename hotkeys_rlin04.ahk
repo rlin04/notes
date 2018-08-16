@@ -7,15 +7,6 @@
 +WheelDown::send {volume_down}
 
 ; ---------------------------------------
-; alt, alt+shift; ---------------------------------------
-; shift
-; volume_change
-; ---------------------------------------
-
-+WheelUp::send {volume_up}
-+WheelDown::send {volume_down}
-
-; ---------------------------------------
 ; alt, alt+shift
 ; deletion, navigation, quote_enclosure
 ; ---------------------------------------
@@ -47,68 +38,71 @@ EncQuote(q) {
 }
 
 ; ---------------------------------------
-; ctrl+alt
-; number_row, switch tabs, volume
-; ---------------------------------------
-
-<^!a::send 1
-<^!s::send 2
-<^!d::send 3
-<^!f::send 4
-<^!g::send 5
-<^!h::send 6
-<^!j::send 7
-<^!k::send 8
-<^!l::send 9
-<^!;::send 0
-<^!p::send {+}
-<^!m::send `-
-<^!e::send `=
-<^!Space::send `_
-<^!Backspace::send {Backspace}
-
-<^!right::send {ralt down}{tab}{ralt up}
-<^!left::send {shift down}{ralt down}{tab}{ralt up}{shift up}
-
-; ---------------------------------------
 ; ctrl+shift
-; shift+number_row
+; number_row
 ; ---------------------------------------
 
-<^+a::send {!}
-<^+s::send @
-<^+d::send {#}
-<^+f::send $
-<^+g::send `%
-<^+h::send {^}
-<^+i::send {&}
-<^+j::send *
-<^+k::send (
-<^+l::send )
-<^+;::send _
-<^+'::send {+}
+<^+a::send 1
+<^+s::send 2
+<^+d::send 3
+<^+f::send 4
+<^+g::send 5
+<^+h::send 6
+<^+j::send 7
+<^+k::send 8
+<^+l::send 9
+<^+;::send 0
+<^+p::send {+}
+<^+m::send `-
+<^+e::send `=
+<^+Space::send `_
+<^+Backspace::send {Backspace}
 
 ; ---------------------------------------
 ; ctrl+shift+alt
-; vim commands
+; shift+number_row
 ; ---------------------------------------
 
-<^+!h::send {Left}
-<^+!j::send {Down}
-<^+!k::send {Up}
-<^+!l::send {Right}
-<^+!b::send ^{Left}
-<^+!e::send ^{Right}
-<^+!y::send ^c
-<^+!p::send ^p
-<^+!x::send {Delete}
-<^+!d::send {End}+{Home}+{Home}+{Left}{Delete}
-<^+!u::send ^z
-<^+!r::send ^y
-<^+!w::send ^s
-<^+!q::WinClose, A
+<^+!a::send {!}
+<^+!s::send @
+<^+!d::send {#}
+<^+!f::send $
+<^+!g::send `%
+<^+!h::send {^}
+<^+!i::send {&}
+<^+!j::send *
+<^+!k::send (
+<^+!l::send )
+<^+!;::send _
+<^+!'::send {+}
 
-<^+v::                            ; Text–only paste from ClipBoard
+; ---------------------------------------
+; ctrl+alt
+; vim commands, navigation, paste
+; ---------------------------------------
+
+<^!h::send {left}
+<^!j::send {down}
+<^!k::send {up}
+<^!l::send {right}
+<^!b::send ^{left}
+<^!e::send ^{right}
+<^!y::send ^c
+<^!p::send ^v
+<^!x::send ^{Delete}
+<^!d::send {end}+{home}+{home}+{left}{delete}
+<^!o::send {end}{enter}
+<^!u::send ^z
+<^!r::send ^y
+<^!w::send ^s
+<^!q::WinClose, A
+
+<^!left::send {shift down}{ralt down}{tab}{ralt up}{shift up}
+<^!down::send {ralt down}{tab}{ralt up}
+<^!up::send {ralt down}{tab}{ralt up}
+<^!right::send {ralt down}{tab}{ralt up}
+
+<^!v::                            ; Text–only paste from ClipBoard
    Clip0 = %ClipBoardAll%
    ClipBoard = %ClipBoard%       ; Convert to text
    Send ^v                       ; For best compatibility: SendPlay
