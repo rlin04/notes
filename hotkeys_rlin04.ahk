@@ -69,7 +69,7 @@ EncQuote(q) {
 
 ; ---------------------------------------
 ; ctrl+shift
-; number_row, clicking
+; number_row, tab_navigation
 ; ---------------------------------------
 
 <^+a::send 1
@@ -86,7 +86,10 @@ EncQuote(q) {
 <^+m::send `-
 <^+e::send `=
 <^+Space::send `_
-<^+Backspace::send {Backspace}
+
+<^+backspace::send {Backspace}
+<^+up::send ^{tab}
+<^+down::send ^+{tab}
 
 ; ---------------------------------------
 ; ctrl+shift+alt
@@ -120,7 +123,7 @@ EncQuote(q) {
 <^!y::send ^c
 <^!p::send ^v
 <^!x::send ^{Backspace}
-<^!Backspace::send {Backspace}
+<^!backspace::send {backspace}
 <^!d::send {end}+{home}+{home}+{left}{delete}
 <^!o::send {end}{enter}
 <^!u::send ^z
