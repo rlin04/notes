@@ -52,3 +52,4 @@ function MyDiff()
   endif
 endfunction
 
+set number

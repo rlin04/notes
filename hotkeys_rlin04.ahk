@@ -50,7 +50,6 @@ return
 !+WheelUp::send {Home}
 !+WheelDown::send {End}
 
-
 !'::EncQuote("'")
 !+'::EncQuote("""")
  
@@ -69,7 +68,7 @@ EncQuote(q) {
 
 ; ---------------------------------------
 ; ctrl+shift
-; number_row, tab_navigation
+; number_row
 ; ---------------------------------------
 
 <^+a::send 1
@@ -87,9 +86,8 @@ EncQuote(q) {
 <^+e::send `=
 <^+Space::send `_
 
+<^+.::send .
 <^+backspace::send {Backspace}
-<^+up::send ^{tab}
-<^+down::send ^+{tab}
 
 ; ---------------------------------------
 ; ctrl+shift+alt
@@ -135,6 +133,9 @@ EncQuote(q) {
 <^!down::send {pgdn}
 <^!up::send {pgup}
 <^!right::send {ralt down}{tab}{ralt up}
+<^!0::send {home}
+<^!4::send {end}
+
 
 <^!v::                            ; Text–only paste from ClipBoard
    Clip0 = %ClipBoardAll%
