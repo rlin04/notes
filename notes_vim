@@ -162,12 +162,9 @@ Enter the following in Windows Command Line to set vim as default
   assoc .="No Extension"
   ftype "No Extension"="C:\[tools]\Vim\vim81\gvim.exe" "%1"
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			       .vimrc Keymap
+`:m5` moves the current line to after line 5
 
-imap ;;    <Esc>
-nmap <M-J> <C-D>
-nmap <M-K> <C-U>
-nmap <M-H> 0
-nmap <M-L> $
-nmap <M-U> <C-R>
+`dvb` switches to inclusive mode and deletes backward, including the current character
+
+`!rm file` deletes file
+`!mv file file2` renames file

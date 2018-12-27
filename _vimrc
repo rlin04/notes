@@ -2,7 +2,7 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-cd C:\Users\richa\Desktop\[vim]
+cd C:\Users\richa\Dropbox\[vim]
 :se autochdir
 
 silent execute '!mkdir "'.$VIMRUNTIME.'/temp"'
@@ -52,4 +52,11 @@ function MyDiff()
   endif
 endfunction
 
+colorscheme torte
+
 set number
+set belloff=all
+
+set nobackup
+set nowritebackup
+set noundofile
