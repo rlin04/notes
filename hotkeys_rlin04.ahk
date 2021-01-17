@@ -41,26 +41,38 @@ return
    WinActivate %win%
 return
 
+#MaxThreadsPerHotkey, 2
+Toggle = 0
+
+!`::
+Toggle = !Toggle
+If Toggle
+   Click, Down
+else
+   Click, Up
+return
+
 ; ---------------------------------------
-; shift
+; ctrl+shift
 ; volume_change
+; delete word
 ; ---------------------------------------
 
-+WheelUp::send {volume_up}
-+WheelDown::send {volume_down}
+^+WheelUp::send {volume_up}
+^+WheelDown::send {volume_down}
+^+x::send ^{delete}
+
 
 ; ---------------------------------------
 ; alt, alt+shift
 ; deletion, navigation, quotes, clicks
 ; ---------------------------------------
 
-!x::send {Delete}
-!+x::send {Backspace}
-!r::send {browser_refresh}
-!h::send ^h
-!Space::send _
-!WheelUp::send {pgup}
-!WheelDown::send {pgdn}
+!q::WinClose, A
+!s::send {Down}
+
+;	!WheelUp::send {pgup}
+;       !WheelDown::send {pgdn}
 !+WheelUp::send {Home}
 !+WheelDown::send {End}
 
@@ -81,32 +93,37 @@ EncQuote(q) {
 }
 
 ; ---------------------------------------
-; ctrl+shift
+; alt+shift
 ; number_row
 ; ---------------------------------------
 
-^+a::send 1
-^+s::send 2
-^+d::send 3
-^+f::send 4
-^+g::send 5
-^+h::send 6
-^+j::send 7
-^+k::send 8
-^+l::send 9
-^+;::send 0
-^+p::send {+}
-^+m::send `-
-^+e::send `=
-^+Space::send `_
+!+z::send 1
+!+x::send 2
+!+c::send 3
+!+a::send 4
+!+s::send 5
+!+d::send 6
+!+q::send 7
+!+w::send 8
+!+e::send 9
+!+r::send {+}
+!+f::send 0
+!+v::send `-
+!+2::send `=
+!+1::send `_
+!+`::send .
 
-^+.::send .
-^+-::send -
-^+/::send /
-^+(::send (
-^+)::send )
-^+8::send *
-^+backspace::send {Backspace}
+!+.::send .
+!+-::send -
+!+/::send /
+!+(::send (
+!+)::send )
+!+8::send *
+!+backspace::send {Backspace}
+
++!Left::Media_Prev
++!Right::Media_Next
++!Down::Media_Play_Pause
 
 ; ---------------------------------------
 ; ctrl+shift+alt
@@ -141,12 +158,11 @@ EncQuote(q) {
 ^!p::send ^v
 ^!x::send ^{Backspace}
 ^!backspace::send {backspace}
-^!d::send {end}+{home}+{home}+{left}{backspace}
+^!d::send {end}+{home}+{home}+{left}{backspace}{right}
 ^!o::send {end}{enter}
 ^!u::send ^z
 ^!r::send ^y
 ^!w::send ^s
-^!q::WinClose, A
 
 ^!left::send {shift down}{ralt down}{tab}{ralt up}{shift up}
 ^!down::send {pgdn}
@@ -163,3 +179,5 @@ EncQuote(q) {
    ClipBoard = %Clip0%           ; Restore original ClipBoard
    VarSetCapacity(Clip0, 0)      ; Free memory
 Return
+
+F1::
